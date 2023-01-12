@@ -16,6 +16,16 @@ on:
         # Input has to be provided for the workflow to run
         required: true
 
+env:
+  TEST_BROWSER_HEADLESS: 1
+  CI: 1
+  GCS_UPLOAD_PREFIX: fake
+  TEST_OPENSEARCH_DASHBOARDS_HOST: localhost
+  TEST_OPENSEARCH_DASHBOARDS_PORT: 6610
+  TEST_OPENSEARCH_TRANSPORT_PORT: 9403
+  TEST_OPENSEARCH_PORT: 9400
+  OSD_SNAPSHOT_SKIP_VERIFY_CHECKSUM: true
+  
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build-linux-images:
