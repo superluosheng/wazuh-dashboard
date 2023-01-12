@@ -15,24 +15,13 @@ on:
         default: 'World'
         # Input has to be provided for the workflow to run
         required: true
-
-env:
-  TEST_BROWSER_HEADLESS: 1
-  CI: 1
-  GCS_UPLOAD_PREFIX: fake
-  TEST_OPENSEARCH_DASHBOARDS_HOST: localhost
-  TEST_OPENSEARCH_DASHBOARDS_PORT: 6610
-  TEST_OPENSEARCH_TRANSPORT_PORT: 9403
-  TEST_OPENSEARCH_PORT: 9400
-  OSD_SNAPSHOT_SKIP_VERIFY_CHECKSUM: true
-
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 
 jobs:
   greet:
     # The type of runner that the job will run on
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
